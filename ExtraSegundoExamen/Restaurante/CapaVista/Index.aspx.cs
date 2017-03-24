@@ -20,7 +20,7 @@ namespace Restaurante.CapaVista
         }
 
         protected void Button1_Click(object sender, EventArgs e) {
-            new CadaNegocios.clsReservaNegocios().insertReserva(txtCedula.Text, txtNombre.Text, txtReserva.SelectedItem.Text, dtpDate.Value);
+            new CadaNegocios.clsReservaNegocios().insertReserva(txtNombre.Text, txtCedula.Text, txtReserva.SelectedItem.Text, dtpDate.Value);
             GridView1.DataSource = new CadaNegocios.clsReservaNegocios().returnSelectGlobal();
             GridView1.DataBind();
         }
